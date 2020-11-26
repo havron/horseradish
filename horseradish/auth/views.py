@@ -181,11 +181,13 @@ def create_user_roles(profile):
     roles.append(role)
 
     # every user is an operator (tied to a default role)
-    if current_app.config.get("LEMUR_DEFAULT_ROLE"):
-        default = role_service.get_by_name(current_app.config["LEMUR_DEFAULT_ROLE"])
+    if current_app.config.get("HORSERADISH_DEFAULT_ROLE"):
+        default = role_service.get_by_name(
+            current_app.config["HORSERADISH_DEFAULT_ROLE"]
+        )
         if not default:
             default = role_service.create(
-                current_app.config["LEMUR_DEFAULT_ROLE"],
+                current_app.config["HORSERADISH_DEFAULT_ROLE"],
                 description="This is the default Horseradish role.",
             )
         if not default.third_party:

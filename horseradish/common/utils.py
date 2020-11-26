@@ -1,5 +1,5 @@
 """
-.. module: lemur.common.utils
+.. module: horseradish.common.utils
     :platform: Unix
     :copyright: (c) 2020 by Sam Havron, see AUTHORS for more
     :license: Apache, see LICENSE for more details.

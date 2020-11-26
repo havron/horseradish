@@ -170,7 +170,9 @@ def configure_logging(app):
     :param app:
     """
     handler = RotatingFileHandler(
-        app.config.get("LOG_FILE", "lemur.log"), maxBytes=10000000, backupCount=100
+        app.config.get("LOG_FILE", "horseradish.log"),
+        maxBytes=10000000,
+        backupCount=100,
     )
 
     handler.setFormatter(

@@ -8,7 +8,7 @@
 from flask import g
 from marshmallow import fields
 
-from horseradish.common.schema import LemurInputSchema, LemurOutputSchema
+from horseradish.common.schema import HorseradishInputSchema, HorseradishOutputSchema
 from horseradish.users.schemas import UserNestedOutputSchema, UserInputSchema
 
 
@@ -20,7 +20,7 @@ def current_user_id():
     }
 
 
-class ApiKeyInputSchema(LemurInputSchema):
+class ApiKeyInputSchema(HorseradishInputSchema):
     name = fields.String(required=False)
     user = fields.Nested(
         UserInputSchema, missing=current_user_id, default=current_user_id
@@ -28,7 +28,7 @@ class ApiKeyInputSchema(LemurInputSchema):
     ttl = fields.Integer()
 
 
-class ApiKeyRevokeSchema(LemurInputSchema):
+class ApiKeyRevokeSchema(HorseradishInputSchema):
     id = fields.Integer(required=True)
     name = fields.String()
     user = fields.Nested(UserInputSchema, required=True)
@@ -37,16 +37,16 @@ class ApiKeyRevokeSchema(LemurInputSchema):
     issued_at = fields.Integer(required=False)
 
 
-class UserApiKeyInputSchema(LemurInputSchema):
+class UserApiKeyInputSchema(HorseradishInputSchema):
     name = fields.String(required=False)
     ttl = fields.Integer()
 
 
-class ApiKeyOutputSchema(LemurOutputSchema):
+class ApiKeyOutputSchema(HorseradishOutputSchema):
     jwt = fields.String()
 
 
-class ApiKeyDescribedOutputSchema(LemurOutputSchema):
+class ApiKeyDescribedOutputSchema(HorseradishOutputSchema):
     id = fields.Integer()
     name = fields.String()
     user = fields.Nested(UserNestedOutputSchema)

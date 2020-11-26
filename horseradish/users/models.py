@@ -2,7 +2,7 @@
 .. module: horseradish.users.models
     :platform: unix
     :synopsis: This module contains all of the models need to create a user within
-    lemur
+    horseradish
     :copyright: (c) 2020 by Sam Havron, see AUTHORS for more
     :license: Apache, see LICENSE for more details.
 

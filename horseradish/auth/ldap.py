@@ -43,7 +43,9 @@ class LdapPrincipal:
         self.ldap_base_dn = current_app.config.get("LDAP_BASE_DN", None)
         self.ldap_use_tls = current_app.config.get("LDAP_USE_TLS", False)
         self.ldap_cacert_file = current_app.config.get("LDAP_CACERT_FILE", None)
-        self.ldap_default_role = current_app.config.get("LEMUR_DEFAULT_ROLE", None)
+        self.ldap_default_role = current_app.config.get(
+            "HORSERADISH_DEFAULT_ROLE", None
+        )
         self.ldap_required_group = current_app.config.get("LDAP_REQUIRED_GROUP", None)
         self.ldap_groups_to_roles = current_app.config.get("LDAP_GROUPS_TO_ROLES", None)
         self.ldap_is_active_directory = current_app.config.get(

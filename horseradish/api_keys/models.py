@@ -1,7 +1,7 @@
 """
 .. module: horseradish.api_keys.models
     :platform: Unix
-    :synopsis: This module contains all of the models need to create an api key within Lemur.
+    :synopsis: This module contains all of the models need to create an api key within Horseradish.
     :copyright: (c) 2020 by Sam Havron, see AUTHORS for more
     :license: Apache, see LICENSE for more details.
 .. moduleauthor:: Eric Coan <kungfury@instructure.com>

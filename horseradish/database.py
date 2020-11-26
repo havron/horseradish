@@ -2,7 +2,7 @@
 .. module: horseradish.database
     :platform: Unix
     :synopsis: This module contains all of the database related methods
-    needed for lemur to interact with a datastore
+    needed for horseradish to interact with a datastore
 
     :copyright: (c) 2020 by Sam Havron, see AUTHORS for more
     :license: Apache, see LICENSE for more details.
